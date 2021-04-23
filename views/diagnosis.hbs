@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <!-- Title Page-->
+    <title>iCare Diagnosis</title>
+
+    <!-- Icons font CSS-->
+    <link href="/rvendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="/rvendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="/rvendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="/rvendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+
+    <!-- Main CSS-->
+    <link href="/rcss/main.css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="/tablecss.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+		<h3>iCare</h3>
+		<ul class="navbar-nav ml-auto">
+			<li><a href="/employeedashboard">Dashboard</a></li>
+            <li><a href="/adddiagnosis">Add Diagnosis</a></li>
+			<li><a href="/">Logout</a></li>
+		</ul>
+    </nav>
+    
+    <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
+        <div class="wrapper wrapper--w680">
+            <form action="/auth/searchdiagnosis" method="POST">
+                <div class="row row-space">
+                    <div class="col-2">
+                        <div class="input-group">
+                            <label class="label"></label>
+                            <input class="input--style-4" type="text" name="patientid" placeholder="Seach with Patient ID">
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="p-t-15">
+                            <button class="btn btn--radius-2 btn--blue" type="submit">Search</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </form>
+            
+            <table class='table table-striped'>
+                <thead>
+                    <tr>
+                    <th>Patient ID</th>
+                    <th>Info</th>
+                    <th>Consultation Fee</th>
+                    </tr>
+                </thead>                
+                
+                <tbody>
+                    {{#each data}}
+                        <tr>
+                            <td>{{this.Patients_ID}}</td>
+                            <td>{{this.Info}}</td>
+                            <td>{{this.Consultation_Fee}}</td>
+                        </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="/rvendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="/rvendor/select2/select2.min.js"></script>
+    <script src="/rvendor/datepicker/moment.min.js"></script>
+    <script src="/rvendor/datepicker/daterangepicker.js"></script>
+
+    <!-- Main JS-->
+    <script src="/rjs/global.js"></script>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
+<!-- end document-->

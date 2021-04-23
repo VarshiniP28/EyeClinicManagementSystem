@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <!-- Title Page-->
+    <title>iCare Product</title>
+
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+
+    <!-- Icons font CSS-->
+    <link href="/rvendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="/rvendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="/rvendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="/rvendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="/rcss/main.css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="/cardcss.css">
+    <link rel="stylesheet" href="/buttoncss.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+		<h3>iCare</h3>
+		<ul class="navbar-nav ml-auto">
+			<li><a href="/product">Product</a></li>
+			<li><a href="">Logout</a></li>
+		</ul>
+    </nav>
+    
+    <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
+           
+        <br><br>
+        {{#each data}}
+            <div class="card">
+                <img src="/images/product_images/{{this.Product_Image}}" alt="Avatar" style="width:100%">
+                <div class="container">
+                    <h5>{{this.Name}}</h5>
+                    <p>{{this.Description}}</p>
+                    <p>Rs.{{this.Price}}</p>
+                    <p><button formaction="/addorder"><a href="/addorder">Order</a></button></p>
+                </div>
+            </div>
+            <br><br>
+        {{/each}}
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="/rvendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="/rvendor/select2/select2.min.js"></script>
+    <script src="/rvendor/datepicker/moment.min.js"></script>
+    <script src="/rvendor/datepicker/daterangepicker.js"></script>
+
+    <!-- Main JS-->
+    <script src="/rjs/global.js"></script>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
+<!-- end document-->
